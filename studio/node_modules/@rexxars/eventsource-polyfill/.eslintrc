@@ -1,0 +1,16 @@
+{
+  "extends": ["sanity", "prettier"],
+  "env": {"node": true, "browser": true},
+  "rules": {
+    "no-var": "off",
+    "consistent-this": "off",
+    "prefer-template": "off",
+    "camelcase": "off",
+    "complexity": "off",
+    "object-shorthand": "off",
+    "max-depth": "off",
+    "no-param-reassign": "off",
+    "one-var": "off",
+    "no-useless-call": "off"
+  }
+}

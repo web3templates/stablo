@@ -1,0 +1,3 @@
+ * Fix scroll position jumping when scrolling a document with very different line heights.
+ * [xml mode](https://codemirror.net/mode/xml/): Look up HTML element behavior in a case-insensitive way.
+ * [vim bindings](https://codemirror.net/demo/vim.html): Support guu for case-changing.

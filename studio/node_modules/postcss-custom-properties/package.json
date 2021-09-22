@@ -1,0 +1,41 @@
+{
+  "name": "postcss-custom-properties",
+  "version": "6.3.1",
+  "description": "PostCSS plugin to polyfill W3C CSS Custom Properties for cascading variables",
+  "keywords": [
+    "css",
+    "postcss",
+    "postcss-plugin",
+    "custom-properties",
+    "variables",
+    "vars"
+  ],
+  "author": "Maxime Thirouin",
+  "license": "MIT",
+  "repository": "https://github.com/postcss/postcss-custom-properties.git",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "balanced-match": "^1.0.0",
+    "postcss": "^6.0.18"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-preset-env": "^1.6.1",
+    "babel-register": "^6.26.0",
+    "eslint": "^4.17.0",
+    "npmpub": "^3.1.0",
+    "tape": "^4.8.0"
+  },
+  "scripts": {
+    "lint": "eslint *.js index.js ./test/",
+    "tape": "tape -r babel-register test/*.js",
+    "test": "npm run lint && npm run babelify && npm run tape",
+    "babelify": "babel index.js --out-dir dist",
+    "prepublish": "npm run babelify",
+    "release": "npmpub"
+  }
+}

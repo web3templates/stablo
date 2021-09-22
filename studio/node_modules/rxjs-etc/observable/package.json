@@ -1,0 +1,7 @@
+{
+  "main": "../dist/cjs/observable/index.js",
+  "module": "../dist/esm/observable/index.js",
+  "name": "rxjs-etc/observable",
+  "sideEffects": false,
+  "typings": "../dist/esm/observable/index.d.ts"
+}

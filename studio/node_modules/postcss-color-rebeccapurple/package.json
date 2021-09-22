@@ -1,0 +1,40 @@
+{
+  "name": "postcss-color-rebeccapurple",
+  "version": "3.1.0",
+  "description": "PostCSS plugin to transform W3C CSS rebeccapurple color to more compatible CSS (rgb())",
+  "keywords": [
+    "css",
+    "postcss",
+    "postcss-plugin",
+    "color",
+    "colour",
+    "rgb",
+    "rebeccapurple"
+  ],
+  "author": "Maxime Thirouin",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/postcss/postcss-color-rebeccapurple.git"
+  },
+  "files": [
+    "index.js"
+  ],
+  "dependencies": {
+    "postcss": "^6.0.22",
+    "postcss-values-parser": "^1.5.0"
+  },
+  "devDependencies": {
+    "jscs": "^3.0.7",
+    "jshint": "^2.9.5",
+    "npmpub": "^3.1.0",
+    "tape": "^4.9.0"
+  },
+  "scripts": {
+    "lint": "npm run jscs && npm run jshint",
+    "jscs": "jscs index.js test/index.js",
+    "jshint": "jshint . --exclude-path .gitignore",
+    "test": "npm run lint && tape test",
+    "release": "npmpub"
+  }
+}

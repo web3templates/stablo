@@ -1,0 +1,98 @@
+{
+  "name": "postcss-font-family-system-ui",
+  "version": "3.0.0",
+  "description": "Use the system-ui font family in CSS",
+  "author": "Junliang Huang <i@jhuang.me>",
+  "contributors": [
+    "Junliang Huang <i@jhuang.me>",
+    "Jonathan Neal <jonathantneal@hotmail.com>"
+  ],
+  "license": "CC0-1.0",
+  "repository": "JLHwung/postcss-font-family-system-ui",
+  "homepage": "https://github.com/JLHwung/postcss-font-family-system-ui#readme",
+  "bugs": "https://github.com/JLHwung/postcss-font-family-system-ui/issues",
+  "main": "index.bundle.js",
+  "module": "index.js",
+  "files": [
+    "index.js",
+    "index.bundle.js"
+  ],
+  "scripts": {
+    "prepublishOnly": "npm test",
+    "pretest": "rollup -c .rollup.js --silent",
+    "test": "echo 'Running tests...'; npm run test:ec && npm run test:spelling && npm run test:js && npm run test:tape",
+    "test:ec": "echint --ignore index.bundle.js test",
+    "test:js": "eslint *.js --cache --ignore-path .gitignore --quiet",
+    "test:spelling": "yaspeller-ci -c package.json --lang en --ignore-uppercase --ignore-roman-numerals --ignore-urls *.md",
+    "test:tape": "postcss-tape"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "dependencies": {
+    "postcss": "^6.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26",
+    "babel-eslint": "^8.2",
+    "babel-preset-env": "^1.6",
+    "echint": "^4.0",
+    "eslint": "^4.15",
+    "eslint-config-dev": "2.0",
+    "postcss-tape": "2.2",
+    "pre-commit": "^1.2",
+    "rollup": "^0.54",
+    "rollup-plugin-babel": "^3.0",
+    "yaspeller-ci": "^1.0.0"
+  },
+  "eslintConfig": {
+    "extends": "dev",
+    "parser": "babel-eslint"
+  },
+  "keywords": [
+    "postcss",
+    "css",
+    "postcss-plugin",
+    "ua",
+    "user",
+    "agent",
+    "platform",
+    "system",
+    "ui",
+    "default",
+    "font",
+    "font-family",
+    "family",
+    "face",
+    "type",
+    "typeface"
+  ],
+  "dictionary": [
+    "Affirmer",
+    "babili",
+    "babelrc",
+    "devDependencies",
+    "env",
+    "es6",
+    "esm",
+    "Gulpfile",
+    "greenkeeper",
+    "Gruntfile",
+    "istanbul",
+    "js",
+    "lockfile",
+    "npm",
+    "nyc",
+    "postcss",
+    "PostCSS",
+    "polyfill",
+    "Refactors",
+    "rollup",
+    "std",
+    "sublicensable",
+    "travis",
+    "ui",
+    "yaspeller",
+    "^[A-f0-9]{8}$"
+  ]
+}

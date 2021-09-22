@@ -1,0 +1,46 @@
+{
+  "name": "react-json-inspector",
+  "version": "7.1.1",
+  "description": "React JSON inspector component",
+  "main": "json-inspector.js",
+  "author": {
+    "name": "Aziz Yuldoshev",
+    "email": "yuldoshev.aziz@gmail.com",
+    "url": "http://lapple.me"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Lapple/react-json-inspector.git"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "create-react-class": "^15.6.0",
+    "debounce": "1.0.0",
+    "md5-o-matic": "^0.1.1",
+    "object-assign": "2.0.0",
+    "prop-types": "^15.5.10"
+  },
+  "devDependencies": {
+    "browserify": "^6.1.0",
+    "chai": "3.5.0",
+    "enzyme": "^2.9.1",
+    "http-server": "^0.7.2",
+    "mocha": "3.0.2",
+    "react": "^15.6.1",
+    "react-addons-test-utils": "15.0.0",
+    "react-dom": "^15.6.1",
+    "react-test-renderer": "^15.6.1",
+    "watchify": "^2.0.0"
+  },
+  "peerDependencies": {
+    "react": "^15.0.0"
+  },
+  "keywords": [
+    "react-component"
+  ],
+  "scripts": {
+    "test": "mocha test/**/*-spec.js",
+    "server": "http-server .",
+    "watch": "watchify example/app.js -o example/app.compiled.js -v"
+  }
+}

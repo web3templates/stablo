@@ -1,0 +1,33 @@
+{
+  "name": "jsdom-global",
+  "description": "Enable DOM in Node.js",
+  "version": "3.0.2",
+  "author": "Rico Sta. Cruz <rico@ricostacruz.com>",
+  "browser": "browser.js",
+  "bugs": {
+    "url": "https://github.com/rstacruz/jsdom-global/issues"
+  },
+  "devDependencies": {
+    "jsdom": "~10.0.0",
+    "standard": "~10.0.2",
+    "tape": "~4.6.3"
+  },
+  "homepage": "https://github.com/rstacruz/jsdom-global#readme",
+  "keywords": [
+    "dom",
+    "jsdom",
+    "test"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "peerDependencies": {
+    "jsdom": ">=10.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rstacruz/jsdom-global.git"
+  },
+  "scripts": {
+    "test": "node test.js && standard"
+  }
+}

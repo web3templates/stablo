@@ -1,0 +1,30 @@
+{
+  "//": "NOTE: TypeScript is only used for typechecking, not transpiling as that's handled by babel",
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules/**/*"
+  ],
+  "compilerOptions": {
+    "types": [
+      "./webpack/type-stubs.d.ts"
+    ],
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "lib": [
+      "dom",
+      "ES2015"
+    ],
+    "target": "es2015",
+    "moduleResolution": "node",
+    "module": "esnext",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "jsx": "preserve",
+    "allowJs": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true
+  }
+}

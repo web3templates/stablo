@@ -1,0 +1,64 @@
+{
+  "name": "onecolor",
+  "description": "Javascript color object with implicit color space conversions. Supports RGB, HSV, HSL and CMYK with alpha channel.",
+  "repository": "git@github.com:One-com/one-color.git",
+  "version": "3.1.0",
+  "license": "BSD-2-Clause",
+  "keywords": [
+    "color",
+    "colour",
+    "conversion",
+    "rgb",
+    "hsv",
+    "hsl",
+    "cmyk"
+  ],
+  "maintainers": [
+    {
+      "name": "Peter Müller",
+      "email": "munter@fumle.dk"
+    },
+    {
+      "name": "Andreas Lind",
+      "email": "andreaslindpetersen@gmail.com"
+    }
+  ],
+  "devDependencies": {
+    "coveralls": "2.11.9",
+    "istanbul": "0.4.2",
+    "jshint": "^2.9.1",
+    "mocha": "2.4.5",
+    "mocha-lcov-reporter": "1.2.0",
+    "rollup": "0.41.6",
+    "rollup-plugin-commonjs": "8.0.2",
+    "uglify-js": "2.8.21",
+    "unexpected": "10.11.1"
+  },
+  "engines": {
+    "node": ">=0.4.8"
+  },
+  "files": [
+    "one-color.js",
+    "one-color.map",
+    "one-color-all.js",
+    "one-color-all.map",
+    "index.js",
+    "minimal.js",
+    "lib"
+  ],
+  "scripts": {
+    "one-color-all": "rollup -c rollup.config.js index.js && uglifyjs --compress --mangle --in-source-map OUT.js.map --source-map one-color-all.map OUT.js > one-color-all.js; rm OUT.*",
+    "one-color": "rollup -c rollup.config.js minimal.js && uglifyjs --compress --mangle --in-source-map OUT.js.map --source-map one-color.map OUT.js > one-color.js; rm OUT.*",
+    "build": "npm run one-color && npm run one-color-all",
+    "preversion": "npm run lint && npm run build && TEST_BUNDLES=true npm test && bash -c 'git add one-color{-all,}.{js,map}'",
+    "lint": "jshint .",
+    "test": "npm run lint && mocha",
+    "coverage": "istanbul cover _mocha -- --reporter dot",
+    "travis": "npm run lint && npm run build && TEST_BUNDLES=true npm run coverage"
+  },
+  "jspm": {
+    "dependencies": {},
+    "main": "one-color-all.js",
+    "jspmPackage": true
+  }
+}

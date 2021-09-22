@@ -1,0 +1,1 @@
+export {SearchExample} from './SearchExample'

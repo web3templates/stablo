@@ -1,0 +1,17 @@
+{
+  "name": "exif",
+  "repo": "component/exif",
+  "description": "Client-side EXIF parser",
+  "version": "1.0.1",
+  "keywords": ["exif", "image", "png", "jpg", "jpeg", "meta"],
+  "dependencies": {},
+  "development": {
+    "component/assert": "*"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "js/ExifReader.js",
+    "index.js"
+  ]
+}

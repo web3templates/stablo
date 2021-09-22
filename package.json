@@ -2,8 +2,11 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "echo 'Building Sanity to public/studio' && cd studio && yarn && npx sanity build ../public/studio -y && echo 'Done'",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "sanity": "cd studio && sanity start",
+    "lint": "next lint"
   },
   "dependencies": {
     "next": "latest",

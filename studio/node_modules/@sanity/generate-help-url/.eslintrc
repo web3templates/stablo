@@ -1,0 +1,9 @@
+{
+  "extends": [
+    "eslint:recommended",
+    "plugin:es5/no-es2015"
+  ],
+  "rules": {
+    "@typescript-eslint/no-var-requires": "off"
+  }
+}

@@ -1,0 +1,101 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
+var _postcss = require('postcss');
+
+var _lodash = require('lodash.foreach');
+
+var _lodash2 = _interopRequireDefault(_lodash);
+
+var _icssReplaceSymbols = require('icss-replace-symbols');
+
+var _icssReplaceSymbols2 = _interopRequireDefault(_icssReplaceSymbols);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var importRegexp = /^:import\((.+)\)$/;
+var exportRegexp = /^:export$/;
+
+/**
+ * @param  {object}  promise
+ * @return {boolean}
+ */
+function isPromise(promise) {
+  return (typeof promise === 'undefined' ? 'undefined' : _typeof(promise)) === 'object' && typeof promise.then === 'function';
+}
+
+/**
+ * @param  {object} css
+ * @param  {object} translations
+ */
+function proceed(css, translations) {
+  var exportTokens = {};
+
+  (0, _icssReplaceSymbols2.default)(css, translations);
+
+  css.walkRules(exportRegexp, function (rule) {
+    rule.walkDecls(function (decl) {
+      (0, _lodash2.default)(translations, function (value, key) {
+        return decl.value = decl.value.replace(key, value);
+      });
+      exportTokens[decl.prop] = decl.value;
+    });
+
+    rule.remove();
+  });
+
+  css.tokens = exportTokens;
+}
+
+/**
+ * @param  {function} options.fetch
+ * @return {function}
+ */
+exports.default = (0, _postcss.plugin)('parser', function parser() {
+  var _ref = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {},
+      fetch = _ref.fetch;
+
+  return function (css) {
+    // https://github.com/postcss/postcss/blob/master/docs/api.md#inputfile
+    var file = css.source.input.file;
+
+    var translations = {};
+    var promises = [];
+
+    var iteration = 0;
+
+    css.walkRules(importRegexp, function (rule) {
+      var dependency = RegExp.$1.replace(/^["']|["']$/g, '');
+      var result = fetch(dependency, file, iteration++);
+
+      if (isPromise(result)) {
+        result.then(function (exports) {
+          rule.walkDecls(function (decl) {
+            return translations[decl.prop] = exports[decl.value];
+          });
+          rule.remove();
+        });
+
+        promises.push(result);
+      } else {
+        rule.walkDecls(function (decl) {
+          return translations[decl.prop] = result[decl.value];
+        });
+        rule.remove();
+      }
+    });
+
+    if (promises.length === 0) {
+      return void proceed(css, translations);
+    }
+
+    return Promise.all(promises).then(function () {
+      return proceed(css, translations);
+    });
+  };
+});

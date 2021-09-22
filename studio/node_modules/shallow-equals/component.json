@@ -1,0 +1,14 @@
+{
+  "name": "shallow-equals",
+  "repo": "hughsk/shallow-equals",
+  "description": "Determine if an array or object is equivalent with another, *not* recursively",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {},
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js"
+  ]
+}

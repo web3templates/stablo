@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../src/middleware/cancel/isCancel.js"],"names":["module","exports","value","__CANCEL__"],"mappings":";;AAAAA,OAAOC,OAAP,GAAiBC,SAAS,CAAC,EAAEA,SAASA,MAAMC,UAAjB,CAA3B","file":"isCancel.js","sourcesContent":["module.exports = value => !!(value && value.__CANCEL__)\n"]}

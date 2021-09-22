@@ -1,0 +1,47 @@
+{
+  "name": "postcss-custom-selectors",
+  "version": "4.0.1",
+  "description": "PostCSS plugin to transform W3C CSS Extensions(Custom Selectors) to more compatible CSS",
+  "keywords": [
+    "postcss",
+    "postcss-plugin",
+    "css",
+    "selector",
+    "custom-selector"
+  ],
+  "authors": [
+    "yisi",
+    "Maxime Thirouin"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/postcss/postcss-custom-selectors.git"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "README-zh.md"
+  ],
+  "dependencies": {
+    "postcss": "^6.0.1",
+    "postcss-selector-matches": "^3.0.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.4.0",
+    "babel-register": "^6.24.1",
+    "babel-tape-runner": "^1.1.0",
+    "eslint": "^3.19.0",
+    "tape": "^4.6.3"
+  },
+  "scripts": {
+    "babelify": "babel src --out-dir dist",
+    "prepublish": "npm run babelify",
+    "lint": "eslint *.js ./src/ ./test/",
+    "tape": "tape -r babel-register test/*.js",
+    "test": "npm run lint && npm run babelify && npm run tape"
+  }
+}

@@ -1,0 +1,31 @@
+{
+    "env": {
+        "browser": true
+    },
+
+    "rules": {
+        "brace-style": "1tbs",
+        "camelcase": [2, {"properties": "never"}],
+        "comma-dangle": "never",
+        "comma-style": [2, "last"],
+        "consistent-return": 1,
+        "eol-last": 1,
+        "indent": 2,
+        "no-console": 1,
+        "no-extra-parens": 0,
+        "no-fallthrough": 0,
+        "no-lonely-if": 1,
+        "no-param-reassign": 1,
+        "no-redeclare": 0,
+        "no-underscore-dangle": 0,
+        "quotes": [1, "single"],
+        "semi": [2, "always"],
+        "space-after-keywords": 1,
+        "space-before-blocks": "always",
+        "space-before-function-paren": "never",
+        "spaced-line-comment": 1,
+        "strict": 0,
+        "use-isnan": 1,
+        "yoda": [2, "never", { "exceptRange": true }]
+    }
+}

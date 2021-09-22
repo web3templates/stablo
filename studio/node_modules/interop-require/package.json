@@ -1,0 +1,8 @@
+{
+  "name": "interop-require",
+  "version": "1.0.0",
+  "description": "Require babel's ES6 modules from node.",
+  "author": "Izaak Schroeder <izaak.schroeder@gmail.com>",
+  "license": "CC0-1.0",
+  "repository": "izaakschroeder/interop-require"
+}

@@ -1,0 +1,30 @@
+{
+  "name": "promise-props-recursive",
+  "version": "1.0.0",
+  "description": "Recursively resolve promises within objects",
+  "main": "src/promise-props-recursive.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rexxars/promise-props-recursive.git"
+  },
+  "keywords": [
+    "promise",
+    "object",
+    "recursive"
+  ],
+  "author": "Espen Hovlandsdal <espen@hovlandsdal.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rexxars/promise-props-recursive/issues"
+  },
+  "homepage": "https://github.com/rexxars/promise-props-recursive#readme",
+  "devDependencies": {
+    "mocha": "^2.3.4"
+  },
+  "dependencies": {
+    "lodash.isplainobject": "^4.0.0"
+  }
+}
