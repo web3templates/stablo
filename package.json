@@ -9,12 +9,21 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@sanity/block-content-to-react": "^3.0.0",
+    "date-fns": "^2.24.0",
     "next": "latest",
+    "next-sanity": "^0.4.0",
+    "next-sanity-image": "^3.1.6",
+    "next-seo": "^4.28.1",
+    "next-themes": "^0.0.15",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.6",
+    "eslint": "^7.32.0",
+    "eslint-config-next": "^11.1.2",
+    "eslint-config-sanity": "^5.1.0",
     "postcss": "^8.3.5",
     "tailwindcss": "^2.2.4"
   }
