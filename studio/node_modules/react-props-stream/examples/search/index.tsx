@@ -1,1 +1,0 @@
-export {SearchExample} from './SearchExample'

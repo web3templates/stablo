@@ -1,1 +1,0 @@
-{"version":3,"sources":["../src/bundle-all.js"],"names":["getIt","require","middleware","module","exports"],"mappings":";;AAAA,MAAMA,QAAQC,QAAQ,SAAR,CAAd;;AAEAD,MAAME,UAAN,GAAmBD,QAAQ,cAAR,CAAnB;;AAEAE,OAAOC,OAAP,GAAiBJ,KAAjB","file":"bundle-all.js","sourcesContent":["const getIt = require('./index')\n\ngetIt.middleware = require('./middleware')\n\nmodule.exports = getIt\n"]}

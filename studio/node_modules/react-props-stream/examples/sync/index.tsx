@@ -1,1 +1,0 @@
-export {SyncExample} from './SyncExample'

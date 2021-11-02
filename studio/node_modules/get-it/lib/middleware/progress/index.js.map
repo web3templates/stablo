@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../../src/middleware/progress/index.js"],"names":["module","exports","require"],"mappings":";;AAAAA,OAAOC,OAAP,GAAiBC,QAAQ,iBAAR,CAAjB","file":"index.js","sourcesContent":["module.exports = require('./node-progress')\n"]}

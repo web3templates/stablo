@@ -1,1 +1,0 @@
-export {PassThroughPropsExample} from './PassThroughPropsExample'

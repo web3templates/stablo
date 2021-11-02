@@ -1,1 +1,0 @@
-export {SimpleExample} from './SimpleExample'

@@ -1,1 +1,0 @@
-export {PropsStreamComponentExample} from './PropsStreamComponentExample'

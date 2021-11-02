@@ -1,9 +1,0 @@
-{
-  "include": ["observableCallback.ts"],
-  "compilerOptions": {
-    "strict": true,
-    "lib": ["dom", "es2015"],
-    "declaration": true,
-    "moduleResolution": "node"
-  }
-}
