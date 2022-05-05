@@ -1,5 +1,18 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# Logs
+/logs
+*.log
+
+# Coverage directory used by tools like istanbul
+/coverage
+
+# Dependency directories
+node_modules
+
+# Compiled sanity studio
+/dist
+
 # dependencies
 /node_modules
 /.pnp
