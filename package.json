@@ -10,21 +10,21 @@
   },
   "dependencies": {
     "@sanity/block-content-to-react": "^3.0.0",
-    "date-fns": "^2.25.0",
-    "next": "^11.1.2",
-    "next-sanity": "^0.4.0",
-    "next-sanity-image": "^3.1.7",
-    "next-seo": "^4.28.1",
-    "next-themes": "^0.0.15",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "date-fns": "^2.28.0",
+    "next": "^12.1.6",
+    "next-sanity": "^0.5.2",
+    "next-sanity-image": "^3.2.1",
+    "next-seo": "^5.4.0",
+    "next-themes": "^0.2.0",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0"
   },
   "devDependencies": {
-    "autoprefixer": "^10.3.7",
-    "eslint": "^8.0.1",
-    "eslint-config-next": "^11.1.2",
-    "eslint-config-sanity": "^5.1.0",
-    "postcss": "^8.3.11",
-    "tailwindcss": "^2.2.17"
+    "autoprefixer": "^10.4.7",
+    "eslint": "^8.14.0",
+    "eslint-config-next": "^12.1.6",
+    "eslint-config-sanity": "^6.0.0",
+    "postcss": "^8.4.13",
+    "tailwindcss": "^3.0.24"
   }
 }
