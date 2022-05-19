@@ -28,7 +28,7 @@ export default function Post(props) {
     initialData: siteconfig,
     enabled: preview || router.query.preview !== undefined
   });
-  console.log(posts);
+  //console.log(posts);
 
   return (
     <>
