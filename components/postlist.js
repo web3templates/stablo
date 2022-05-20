@@ -4,6 +4,7 @@ import { cx } from "@utils/all";
 import GetImage from "@utils/getImage";
 import { parseISO, format } from "date-fns";
 import { PhotographIcon } from "@heroicons/react/outline";
+import CategoryLabel from "@components/blog/category";
 
 export default function PostList({ post, aspect }) {
   return (
@@ -14,7 +15,7 @@ export default function PostList({ post, aspect }) {
             "relative overflow-hidden transition-all bg-gray-100 rounded-md dark:bg-gray-800   hover:scale-105",
             aspect === "landscape" ? "aspect-video" : "aspect-square"
           )}>
-          <Link href={`/blog/${post.slug.current}`}>
+          <Link href={`/post/${post.slug.current}`}>
             <a>
               {post.mainImage ? (
                 <Image
@@ -34,45 +35,24 @@ export default function PostList({ post, aspect }) {
             </a>
           </Link>
         </div>
-        <div>
-          {post?.categories?.length &&
-            post.categories.slice(0).map((category, index) => (
-              <Link
-                href={`/category/${category.slug.current}`}
-                key={index}>
-                <a
-                  className={cx(
-                    "inline-block mt-5 text-xs font-medium tracking-wider text-gray-600 uppercase ",
-                    category.color === "green"
-                      ? "text-green-500"
-                      : category.color === "blue"
-                      ? "text-blue-500"
-                      : category.color === "orange"
-                      ? "text-orange-400"
-                      : category.color === "purple"
-                      ? "text-purple-500"
-                      : "text-pink-500"
-                  )}>
-                  {category.title}
-                </a>
-              </Link>
-            ))}
-        </div>
-        <h2 className="mt-2 text-lg font-semibold tracking-normal text-brand-primary">
-          <Link href={`/blog/${post.slug.current}`}>
+        <CategoryLabel categories={post.categories} />
+        <h2 className="mt-2 text-lg font-semibold tracking-normal text-brand-primary dark:text-white">
+          <Link href={`/post/${post.slug.current}`}>
             {post.title}
           </Link>
         </h2>
 
-        <div>
+        <div className="hidden">
           {post.excerpt && (
-            <p className="mt-2 text-sm text-gray-500 line-clamp-3">
-              {post.excerpt}
+            <p className="mt-2 text-sm text-gray-500 dark:text-gray-400 line-clamp-3">
+              <Link href={`/post/${post.slug.current}`}>
+                {post.excerpt}
+              </Link>
             </p>
           )}
         </div>
 
-        <div className="flex items-center mt-3 space-x-3 text-gray-500">
+        <div className="flex items-center mt-3 space-x-3 text-gray-500 dark:text-gray-400">
           <div className="flex items-center gap-3">
             <div className="relative flex-shrink-0 w-5 h-5">
               {post.author.image && (
@@ -91,7 +71,9 @@ export default function PostList({ post, aspect }) {
             </div>
             <span className="text-sm">{post.author.name}</span>
           </div>
-          <span className="text-xs text-gray-300">&bull;</span>
+          <span className="text-xs text-gray-300 dark:text-gray-600">
+            &bull;
+          </span>
           <time
             className="text-sm"
             dateTime={post?.publishedAt || post._createdAt}>
