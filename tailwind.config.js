@@ -15,12 +15,14 @@ module.exports = {
       },
       aspectRatio: {
         "4/3": "4 / 3",
-        "3/2": "3 / 2"
+        "3/2": "3 / 2",
+        "2/3": "2 / 3",
+        "9/16": "9 / 16"
       }
     }
   },
   variants: {
     extend: {}
   },
-  plugins: []
+  plugins: [require("@tailwindcss/line-clamp")]
 };

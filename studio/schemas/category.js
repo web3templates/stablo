@@ -19,6 +19,20 @@ export default {
       validation: Rule => Rule.required()
     },
     {
+      name: "color",
+      title: "Color",
+      type: "string",
+      description: "Color of the category",
+      options: {
+        list: [
+          { title: "Green", value: "green" },
+          { title: "Blue", value: "blue" },
+          { title: "Purple", value: "purple" },
+          { title: "Orange", value: "orange" }
+        ]
+      }
+    },
+    {
       name: "description",
       title: "Description",
       type: "text"
