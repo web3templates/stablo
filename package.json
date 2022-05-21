@@ -23,7 +23,9 @@
     "next-seo": "^5.4.0",
     "next-themes": "^0.2.0",
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "react-hook-form": "^7.31.2",
+    "use-web3forms": "^1.2.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.7",

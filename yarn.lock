@@ -1988,6 +1988,11 @@ react-dom@^18.1.0:
     loose-envify "^1.1.0"
     scheduler "^0.22.0"
 
+react-hook-form@^7.31.2:
+  version "7.31.2"
+  resolved "https://registry.yarnpkg.com/react-hook-form/-/react-hook-form-7.31.2.tgz#efb7ac469810954488b7cf40be4e5017122c6e5e"
+  integrity sha512-oPudn3YuyzWg//IsT9z2cMEjWocAgHWX/bmueDT8cmsYQnGY5h7/njjvMDfLVv3mbdhYBjslTRnII2MIT7eNCA==
+
 react-is@^16.13.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
@@ -2389,6 +2394,11 @@ url-parse@^1.1.9, url-parse@^1.4.3:
   dependencies:
     querystringify "^2.1.1"
     requires-port "^1.0.0"
+
+use-web3forms@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/use-web3forms/-/use-web3forms-1.2.1.tgz#0aef764be8d1b15820a04149e531793d4d111e31"
+  integrity sha512-VP2QGuFNJ/XRJ2rizTzSFQv7LsYw+VkxUpiNzIbLAo0fag0TfxE3DsTEplhAsA5/Umu4of2Oxfj+9zPjow+mgg==
 
 util-deprecate@^1.0.1, util-deprecate@^1.0.2, util-deprecate@~1.0.1:
   version "1.0.2"

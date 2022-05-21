@@ -153,7 +153,7 @@ export default function Post(props) {
           {/* {post?.mainImage && <MainImage image={post.mainImage} />} */}
           <Container>
             <article className="max-w-screen-md mx-auto ">
-              <div className="my-3 prose prose-base dark:prose-invert prose-a:text-blue-500 max-w-none">
+              <div className="mx-auto my-3 prose prose-base dark:prose-invert prose-a:text-blue-500">
                 {post.body && <PortableText value={post.body} />}
               </div>
               <div className="flex justify-center mt-7 mb-7">

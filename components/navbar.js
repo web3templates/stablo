@@ -3,8 +3,12 @@ import { Disclosure } from "@headlessui/react";
 import Container from "@components/container";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "/public/img/logo.svg";
-import LogoWhite from "/public/img/logo-white.svg";
+import Logo from "../public/img/logo.svg";
+import LogoWhite from "../public/img/logo-white.svg";
+
+const myLoader = ({ src }) => {
+  return src;
+};
 
 export default function Navbar() {
   const leftmenu = [
@@ -18,22 +22,24 @@ export default function Navbar() {
     },
     {
       label: "Contact",
-      href: "/category"
+      href: "/contact"
     }
   ];
 
   const rightmenu = [
     {
       label: "Archive",
-      href: "/"
+      href: "/archive"
     },
     {
       label: "Github",
-      href: "/"
+      href: "https://github.com/web3templates/stablo",
+      external: true
     },
     {
       label: "Download",
-      href: "/"
+      href: "https://web3templates.com/templates/stablo-minimal-blog-template",
+      external: true
     }
   ];
 
@@ -58,12 +64,20 @@ export default function Navbar() {
                 <div className="flex justify-between w-full md:w-auto">
                   <Link href="/">
                     <a className="w-28 dark:hidden">
-                      <Image src={Logo} alt="logo" />
+                      <Image
+                        src={Logo}
+                        alt="logo"
+                        loader={myLoader}
+                      />
                     </a>
                   </Link>
                   <Link href="/">
                     <a className="hidden w-28 dark:block">
-                      <Image src={LogoWhite} alt="logo" />
+                      <Image
+                        src={LogoWhite}
+                        alt="logo"
+                        loader={myLoader}
+                      />
                     </a>
                   </Link>
                   <Disclosure.Button
@@ -93,7 +107,10 @@ export default function Navbar() {
                 <div className="flex-col items-center justify-start order-2 hidden w-full md:flex md:flex-row md:w-auto md:flex-1 md:order-none">
                   {rightmenu.map((item, index) => (
                     <Link href={item.href} key={index}>
-                      <a className="px-5 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500">
+                      <a
+                        className="px-5 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500"
+                        target={item.external ? "_blank" : ""}
+                        rel={item.external ? "noopener" : ""}>
                         {item.label}
                       </a>
                     </Link>
@@ -104,7 +121,10 @@ export default function Navbar() {
                 <div className="flex flex-col items-center justify-start order-2 w-full md:hidden">
                   {mobilemenu.map((item, index) => (
                     <Link href={item.href} key={index}>
-                      <a className="px-5 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500">
+                      <a
+                        className="px-5 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500"
+                        target={item.external ? "_blank" : ""}
+                        rel={item.external ? "noopener" : ""}>
                         {item.label}
                       </a>
                     </Link>

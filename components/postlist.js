@@ -7,9 +7,15 @@ import { PhotographIcon } from "@heroicons/react/outline";
 import CategoryLabel from "@components/blog/category";
 
 export default function PostList({ post, aspect }) {
+  const imageProps = post?.mainImage
+    ? GetImage(post.mainImage)
+    : null;
+  const AuthorimageProps = post?.author?.image
+    ? GetImage(post.author.image)
+    : null;
   return (
     <>
-      <div className="cursor-pointer">
+      <div className="cursor-pointer link-effect">
         <div
           className={cx(
             "relative overflow-hidden transition-all bg-gray-100 rounded-md dark:bg-gray-800   hover:scale-105",
@@ -17,10 +23,11 @@ export default function PostList({ post, aspect }) {
           )}>
           <Link href={`/post/${post.slug.current}`}>
             <a>
-              {post.mainImage ? (
+              {imageProps ? (
                 <Image
-                  src={GetImage(post.mainImage).src}
-                  blurDataURL={GetImage(post.mainImage).blurDataURL}
+                  src={imageProps.src}
+                  loader={imageProps.loader}
+                  blurDataURL={imageProps.blurDataURL}
                   alt={post.mainImage.alt || "Thumbnail"}
                   placeholder="blur"
                   layout="fill"
@@ -38,7 +45,9 @@ export default function PostList({ post, aspect }) {
         <CategoryLabel categories={post.categories} />
         <h2 className="mt-2 text-lg font-semibold tracking-normal text-brand-primary dark:text-white">
           <Link href={`/post/${post.slug.current}`}>
-            {post.title}
+            <span className="link-underline link-underline-blue">
+              {post.title}
+            </span>
           </Link>
         </h2>
 
@@ -57,10 +66,9 @@ export default function PostList({ post, aspect }) {
             <div className="relative flex-shrink-0 w-5 h-5">
               {post.author.image && (
                 <Image
-                  src={GetImage(post.author.image).src}
-                  blurDataURL={
-                    GetImage(post.author.image).blurDataURL
-                  }
+                  src={AuthorimageProps.src}
+                  blurDataURL={AuthorimageProps.blurDataURL}
+                  loader={AuthorimageProps.loader}
                   objectFit="cover"
                   layout="fill"
                   alt={post.author.name}
