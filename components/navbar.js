@@ -5,10 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Logo from "../public/img/logo.svg";
 import LogoWhite from "../public/img/logo-white.svg";
-
-const myLoader = ({ src }) => {
-  return src;
-};
+import { myLoader } from "@utils/all";
 
 export default function Navbar() {
   const leftmenu = [
