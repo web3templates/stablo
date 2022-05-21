@@ -71,7 +71,7 @@ export default function PostList({ post, aspect }) {
                   loader={AuthorimageProps.loader}
                   objectFit="cover"
                   layout="fill"
-                  alt={post.author.name}
+                  alt={post?.author?.name}
                   placeholder="blur"
                   className="rounded-full"
                 />

@@ -38,3 +38,6 @@ yarn-error.log*
 
 # netlify
 .netlify
+
+# studio output
+public/studio

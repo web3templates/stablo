@@ -38,6 +38,12 @@ export default function Post(props) {
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
+  const imageProps = post?.mainImage
+    ? GetImage(post?.mainImage)
+    : null;
+  const AuthorimageProps = post?.author?.image
+    ? GetImage(post.author.image)
+    : null;
 
   return (
     <>
@@ -97,14 +103,13 @@ export default function Post(props) {
               <div className="flex justify-center mt-3 space-x-3 text-gray-500 ">
                 <div className="flex items-center gap-3">
                   <div className="relative flex-shrink-0 w-10 h-10">
-                    {post?.author?.image && (
+                    {AuthorimageProps && (
                       <Image
-                        src={GetImage(post.author.image).src}
-                        blurDataURL={
-                          GetImage(post.author.image).blurDataURL
-                        }
+                        src={AuthorimageProps.src}
+                        blurDataURL={AuthorimageProps.blurDataURL}
+                        loader={AuthorimageProps.loader}
                         objectFit="cover"
-                        alt={post.author.name}
+                        alt={post?.author?.name}
                         placeholder="blur"
                         layout="fill"
                         className="rounded-full"
@@ -139,9 +144,11 @@ export default function Post(props) {
           </Container>
 
           <div className="relative z-0 max-w-screen-lg mx-auto overflow-hidden lg:rounded-lg aspect-video">
-            {post?.mainImage && (
+            {imageProps && (
               <Image
-                src={GetImage(post.mainImage).src}
+                src={imageProps.src}
+                loader={imageProps.loader}
+                blurDataURL={imageProps.blurDataURL}
                 alt={post.mainImage?.alt || "Thumbnail"}
                 layout="fill"
                 loading="eager"
