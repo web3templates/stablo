@@ -1,33 +1,91 @@
-# Stablo Blog Template
+# Stablo Blog Template - Next.js & Sanity CMS
 
-Stablo is a JAMStack Starter template built with Next.js, Tailwind CSS & Sanity CMS.
+Stablo is a JAMStack Starter template built with Next.js, Tailwind CSS & Sanity CMS by [Web3Templates](https://web3templates.com/).
+
+**[Click here to see live demo →](https://stablo-template.vercel.app/)**
 
 ## Quick Start
 
-You can click "Use Template" button above to quickly copy this template or use the "Fork" option. You can also clone to your local by using the below command.
+To use this template and configure sanity and deploying to vercel, we recommend the "One Click Deploy" method.  Just follow the GUI and you will have an exact copy of what you see in the live demo .Using this method will automatically configure the following tasks for you.
 
-```bash
-# create a new folder and clone into it
-git clone https://github.com/web3templates/stablo.git projectname
+- Signup/Login to Sanity CMS (if not already)
+- Create a Sanity Project
+- Add required CORS & API settings in the project
+- Create new Repository in Github
+- Install Sanity Integration in Vercel
+- Add required `.env` variables
+- Deploy Sanity Studio - Content Manager
+- Import Demo Content (as seen in live demo)
+- Deploy to Vercel
+ 
 
-# if you are already inside your project folder
-git clone https://github.com/web3templates/stablo.git .
+<a href="https://www.sanity.io/create?template=web3templates%2Fstablo">
+<img width="259" alt="Deploy to Vercel & Sanity" src="https://user-images.githubusercontent.com/1884712/169833532-1007b9aa-1456-4386-9526-7b5b46b094ed.png">
+</a>
+
+
+To setup one click deployment, click the above link below and follow the steps. 
+
+## Local Development
+
+Again, we recommend you to use the one-click deploy first which will create a github repo. You can then clone the github repo to your local system and change following `.env` variables. 
+
+1. ~root/`.env.local`
+
+Change `.env.local.example` placed in the root folder and rename it to `.env.local` and add your sanity project ID. Get it from https://sanity.io/manage
+
+```
+NEXT_PUBLIC_SANITY_PROJECT_ID=xxyyzz
 ```
 
-## Setup Sanity CMS
+2. `/studio/.env.development` or `/studio/sanity.json`
 
-**1. Install Sanity CLI (if not already)**
+To develop sanity cms locally, you also need to add the Project ID and Dataset in either `.env` or in `sanity.json` file.
+
+```
+# .env.development
+SANITY_STUDIO_API_PROJECT_ID=xxyyzz
+SANITY_STUDIO_API_DATASET=production
+
+```
+or you can directly replace the project ID in the `/studio/sanity.json`
+
+```js
+// sanity.json
+  // ...
+  "api": {
+    "projectId": "xxyyzz",
+    "dataset": "production"
+  },
+  // ...
+```
+
+
+### Run Next.js frontend
+
+You can use the normal Next.js method to run the frontend. Just run the following command and a live server will open on `http://localhost:3000`
+
+```
+yarn dev
+```
+
+
+### Run Sanity Studio CMS
+
+1. Install Sanity CLI globally (if not already)
 
 ```
 npm install -g @sanity/cli
 ```
 
-**2. Create New Project**
+2. Run 
 
-If you want to start fresh, you can delete the `/studio` folder and run the following command inside your app. it will ask few questions including the studio path.
+To run sanity studio server, run the following command in your terminal.  It will open a live server on `http://localhost:3333`
 
 ```
-sanity init
+yarn sanity
+# or
+cd studio && sanity start
 ```
 
 or, if you want to modify current Pajamas sanity template, Create a new project from https://www.sanity.io/manage and copy the project ID.
@@ -40,30 +98,6 @@ Now run the following command to install dependencies inside the /studio folder.
 yarn install
 ```
 
-<!-- This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v2.2)](https://blog.tailwindcss.com/tailwindcss-2-2) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
+## Sponsor
 
-It uses the new [`Just-in-Time Mode`](https://tailwindcss.com/docs/just-in-time-mode) for Tailwind CSS.
-
-## Preview
-
-Preview the example live on [StackBlitz](http://stackblitz.com/):
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/vercel/next.js/tree/canary/examples/with-tailwindcss)
-
-## Deploy your own
-
-Deploy the example using [Vercel](https://vercel.com?utm_source=github&utm_medium=readme&utm_campaign=next-example):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss&project-name=with-tailwindcss&repository-name=with-tailwindcss)
-
-## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
-
-```bash
-npx create-next-app --example with-tailwindcss with-tailwindcss-app
-# or
-yarn create next-app --example with-tailwindcss with-tailwindcss-app
-```
-
-Deploy it to the cloud with [Vercel](https://vercel.com/new?utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)). -->
+<a href="https://vercel.com/?utm_source=web3templates&amp;utm_campaign=oss" rel="nofollow"><img src="https://camo.githubusercontent.com/37b009b52b3a9af7886f52e75cd76d1b32fef331ab1dc2108089c0ced0b7635f/68747470733a2f2f7777772e6461746f636d732d6173736574732e636f6d2f33313034392f313631383938333239372d706f77657265642d62792d76657263656c2e737667" alt="image" style="max-width: 70%;"></a>
