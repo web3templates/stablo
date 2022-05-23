@@ -50,7 +50,7 @@ export default function Post(props) {
                   alt: ""
                 }
               ],
-              site_name: "Web3Forms"
+              site_name: "Stablo"
             }}
             twitter={{
               cardType: "summary_large_image"
