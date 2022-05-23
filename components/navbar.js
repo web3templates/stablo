@@ -35,7 +35,7 @@ export default function Navbar() {
     },
     {
       label: "Download",
-      href: "https://web3templates.com/templates/stablo-minimal-blog-template",
+      href: "https://web3templates.com/templates/stablo-minimal-blog-website-template",
       external: true
     }
   ];
