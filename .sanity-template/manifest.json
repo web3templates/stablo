@@ -4,7 +4,7 @@
     "description": "Stablo is a Minimalblog website template built with Next.js, TailwindCSS & Sanity CMS",
     "previewMedia": {
         "type": "image",
-        "src": "assets/thumbnail.jpg",
+        "src": "public/img/opengraph.jpg",
         "alt": "Stablo Next.js Minimal Blog Template"
     },
     "technologies": [{
