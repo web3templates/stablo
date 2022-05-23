@@ -1,0 +1,36 @@
+{
+    "version": 2,
+    "title": "Stablo Next.js Minimal Blog Template",
+    "description": "Stablo is a Minimalblog website template built with Next.js, TailwindCSS & Sanity CMS",
+    "previewMedia": {
+        "type": "image",
+        "src": "assets/thumbnail.jpg",
+        "alt": "Stablo Next.js Minimal Blog Template"
+    },
+    "technologies": [{
+            "id": "vercel",
+            "name": "Vercel",
+            "url": "https://vercel.com/"
+        },
+        {
+            "id": "nextjs",
+            "name": "Next.js",
+            "url": "https://nextjs.org"
+        },
+        {
+            "id": "tailwindcss",
+            "name": "TailwindCSS",
+            "url": "https://tailwindcss.com"
+        }
+    ],
+    "deployment": {
+        "provider": "vercel",
+        "studio": {
+            "basePath": "/studio"
+        },
+        "corsOrigins": [{
+            "origin": "http://localhost:3000",
+            "allowCredentials": true
+        }]
+    }
+}

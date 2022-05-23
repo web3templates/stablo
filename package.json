@@ -6,6 +6,7 @@
     "build": "next build",
     "start": "next start",
     "sanity": "cd studio && sanity start",
+    "export": "cd studio && sanity dataset export production ../.sanity-template/data/production.tar.gz",
     "lint": "next lint"
   },
   "dependencies": {
