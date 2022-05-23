@@ -44,7 +44,7 @@ export default function Post(props) {
               description: siteConfig?.description || "",
               images: [
                 {
-                  url: "",
+                  url: ogimage,
                   width: 800,
                   height: 600,
                   alt: ""

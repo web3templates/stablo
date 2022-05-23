@@ -8,7 +8,7 @@ import Container from "@components/container";
 // import Categories from "@components/categories";
 import { useRouter } from "next/router";
 import { getClient, usePreviewSubscription } from "@lib/sanity";
-
+import defaultOG from "../public/img/opengraph.jpg";
 import { postquery, configQuery } from "@lib/groq";
 
 import PostList from "@components/postlist";
@@ -29,7 +29,9 @@ export default function Post(props) {
     enabled: preview || router.query.preview !== undefined
   });
   //console.log(posts);
-
+  const ogimage = siteConfig?.openGraphImage
+    ? GetImage(siteConfig?.openGraphImage).src
+    : defaultOG.src;
   return (
     <>
       {posts && siteConfig && (
@@ -44,7 +46,7 @@ export default function Post(props) {
               description: siteConfig?.description || "",
               images: [
                 {
-                  url: "",
+                  url: ogimage,
                   width: 800,
                   height: 600,
                   alt: ""
