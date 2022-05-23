@@ -31,6 +31,10 @@
         "corsOrigins": [{
             "origin": "http://localhost:3000",
             "allowCredentials": true
-        }]
+        }],
+        "envVars": {
+            "projectId": ["NEXT_PUBLIC_SANITY_PROJECT_ID"],
+            "dataset": ["NEXT_PUBLIC_SANITY_DATASET"]
+        }
     }
 }
