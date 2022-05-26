@@ -6,7 +6,7 @@ import { parseISO, format } from "date-fns";
 import { PhotographIcon } from "@heroicons/react/outline";
 import CategoryLabel from "@components/blog/category";
 
-export default function PostList({ post, aspect }) {
+export default function PostList({ post, aspect, preloadImage }) {
   const imageProps = post?.mainImage
     ? GetImage(post.mainImage)
     : null;
@@ -30,8 +30,11 @@ export default function PostList({ post, aspect }) {
                   blurDataURL={imageProps.blurDataURL}
                   alt={post.mainImage.alt || "Thumbnail"}
                   placeholder="blur"
+                  sizes="80vw"
+                  //sizes="(max-width: 640px) 90vw, 480px"
                   layout="fill"
                   objectFit="cover"
+                  priority={preloadImage ? true : false}
                   className="transition-all"
                 />
               ) : (
@@ -73,6 +76,7 @@ export default function PostList({ post, aspect }) {
                   layout="fill"
                   alt={post?.author?.name}
                   placeholder="blur"
+                  sizes="30px"
                   className="rounded-full"
                 />
               )}

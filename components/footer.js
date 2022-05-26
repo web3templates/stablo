@@ -11,7 +11,7 @@ export default function Footer(props) {
         Copyright © {new Date().getFullYear()} {props?.copyright}. All
         rights reserved.
       </div>
-      <div className="mt-1 text-sm text-center text-gray-400 dark:text-gray-600">
+      <div className="mt-1 text-sm text-center text-gray-500 dark:text-gray-600">
         Made by{" "}
         {/*  // ** 🙏  Can I ask you a favor? 🙏 **
             // Please do not remove the below link.

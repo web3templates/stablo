@@ -3,11 +3,10 @@ import { Disclosure } from "@headlessui/react";
 import Container from "@components/container";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "../public/img/logo.svg";
-import LogoWhite from "../public/img/logo-white.svg";
+import GetImage from "@utils/getImage";
 import { myLoader } from "@utils/all";
 
-export default function Navbar() {
+export default function Navbar(props) {
   const leftmenu = [
     {
       label: "Home",
@@ -58,23 +57,37 @@ export default function Navbar() {
                     </Link>
                   ))}
                 </div>
-                <div className="flex justify-between w-full md:w-auto">
+                <div className="flex justify-between items-center w-full md:w-auto">
                   <Link href="/">
                     <a className="w-28 dark:hidden">
-                      <Image
-                        src={Logo}
-                        alt="logo"
-                        loader={myLoader}
-                      />
+                      {props.logo ? (
+                        <Image
+                          {...GetImage(props.logo)}
+                          alt="Logo"
+                          sizes="(max-width: 640px) 100vw, 200px"
+                          priority={true}
+                        />
+                      ) : (
+                        <span className="block text-center">
+                          Stablo
+                        </span>
+                      )}
                     </a>
                   </Link>
                   <Link href="/">
                     <a className="hidden w-28 dark:block">
-                      <Image
-                        src={LogoWhite}
-                        alt="logo"
-                        loader={myLoader}
-                      />
+                      {props.logoalt ? (
+                        <Image
+                          {...GetImage(props.logoalt)}
+                          alt="Logo"
+                          sizes="(max-width: 640px) 100vw, 200px"
+                          priority={true}
+                        />
+                      ) : (
+                        <span className="block text-center">
+                          Stablo
+                        </span>
+                      )}
                     </a>
                   </Link>
                   <Disclosure.Button

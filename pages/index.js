@@ -1,6 +1,3 @@
-import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
 import { NextSeo } from "next-seo";
 import Layout from "@components/layout";
 import Container from "@components/container";
@@ -63,6 +60,7 @@ export default function Post(props) {
                   key={post._id}
                   post={post}
                   aspect="landscape"
+                  preloadImage={true}
                 />
               ))}
             </div>
