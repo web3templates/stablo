@@ -15,7 +15,7 @@ export default function PostList({ post, aspect, preloadImage }) {
     : null;
   return (
     <>
-      <div className="cursor-pointer link-effect">
+      <div className="cursor-pointer group">
         <div
           className={cx(
             "relative overflow-hidden transition-all bg-gray-100 rounded-md dark:bg-gray-800   hover:scale-105",
@@ -48,7 +48,14 @@ export default function PostList({ post, aspect, preloadImage }) {
         <CategoryLabel categories={post.categories} />
         <h2 className="mt-2 text-lg font-semibold tracking-normal text-brand-primary dark:text-white">
           <Link href={`/post/${post.slug.current}`}>
-            <span className="link-underline link-underline-blue">
+            <span
+              className="     bg-gradient-to-r from-green-200 to-green-100 dark:from-purple-800 dark:to-purple-900
+          bg-[length:0px_10px]
+          bg-left-bottom
+          bg-no-repeat
+          transition-[background-size]
+          duration-500
+          hover:bg-[length:100%_3px] group-hover:bg-[length:100%_10px]">
               {post.title}
             </span>
           </Link>
