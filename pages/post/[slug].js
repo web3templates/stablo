@@ -42,6 +42,7 @@ export default function Post(props) {
   const imageProps = post?.mainImage
     ? GetImage(post?.mainImage)
     : null;
+
   const AuthorimageProps = post?.author?.image
     ? GetImage(post.author.image)
     : null;
@@ -155,6 +156,7 @@ export default function Post(props) {
                 loader={imageProps.loader}
                 blurDataURL={imageProps.blurDataURL}
                 alt={post.mainImage?.alt || "Thumbnail"}
+                placeholder="blur"
                 layout="fill"
                 loading="eager"
                 objectFit="cover"
