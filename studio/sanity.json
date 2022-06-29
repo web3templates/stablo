@@ -5,7 +5,7 @@
     "basePath": "/studio"
   },
   "api": {
-    "projectId": "cijrdavx",
+    "projectId": "",
     "dataset": "production"
   },
   "plugins": [
