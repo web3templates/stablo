@@ -28,9 +28,10 @@ export default function Navbar(props) {
       href: "/archive"
     },
     {
-      label: "Github",
-      href: "https://github.com/web3templates/stablo",
-      external: true
+      label: "Pro Version",
+      href: "https://stablo-pro.web3templates.com/",
+      external: true,
+      badge: "new"
     },
     {
       label: "Download",
@@ -57,7 +58,7 @@ export default function Navbar(props) {
                     </Link>
                   ))}
                 </div>
-                <div className="flex justify-between items-center w-full md:w-auto">
+                <div className="flex items-center justify-between w-full md:w-auto">
                   <Link href="/">
                     <a className="w-28 dark:hidden">
                       {props.logo ? (
@@ -121,7 +122,12 @@ export default function Navbar(props) {
                         className="px-5 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500"
                         target={item.external ? "_blank" : ""}
                         rel={item.external ? "noopener" : ""}>
-                        {item.label}
+                        <span> {item.label}</span>
+                        {item.badge && (
+                          <span className="bg-blue-100 text-blue-600 text-xs font-semibold ml-2 px-2 py-0.5 rounded dark:bg-cyan-200 dark:text-blue-800 ">
+                            {item.badge}
+                          </span>
+                        )}
                       </a>
                     </Link>
                   ))}
