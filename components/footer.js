@@ -18,7 +18,7 @@ export default function Footer(props) {
           {/*  // ** 🙏  Can I ask you a favor? 🙏 **
             // Please do not remove the below link.
            // It helps us to grow & continue our work. Thank you.
-          // OR contact hello@web3templates.com for commercial license.  */}
+          // OR Purchase PRO version for commercial license.  */}
           <a
             href="https://web3templates.com/?ref=stablo-template"
             rel="noopener"
@@ -26,7 +26,6 @@ export default function Footer(props) {
             Web3Templates
           </a>
         </span>
-        {/*Can you not remove above link? */}
         <span>&middot;</span>
         <span>
           {" "}
@@ -66,7 +65,7 @@ export default function Footer(props) {
 const Backlink = () => {
   return (
     <a
-      href="https://web3templates.com"
+      href="https://web3templates.com/templates/stablo-minimal-blog-website-template"
       target="_blank"
       rel="noopener"
       className="fixed flex px-3 py-1 space-x-2 text-sm font-semibold text-gray-900 bg-white border border-gray-300 rounded shadow-sm place-items-center right-5 bottom-5 dark:bg-trueGray-900 dark:border-trueGray-700 dark:text-trueGray-300">
@@ -89,7 +88,7 @@ const Backlink = () => {
         />
       </svg>
 
-      <span>Web3Templates</span>
+      <span> Purchase Pro ↗</span>
     </a>
   );
 };
