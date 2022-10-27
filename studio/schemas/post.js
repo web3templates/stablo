@@ -2,6 +2,9 @@ export default {
   name: "post",
   title: "Post",
   type: "document",
+  initialValue: () => ({
+    publishedAt: new Date().toISOString()
+  }),
   fields: [
     {
       name: "title",
@@ -70,6 +73,11 @@ export default {
       name: "publishedAt",
       title: "Published at",
       type: "datetime"
+    },
+    {
+      name: "featured",
+      title: "Mark as Featured",
+      type: "boolean"
     },
     {
       name: "body",
