@@ -1,8 +1,47 @@
 # Stablo Blog Template - Next.js & Sanity CMS
 
-Stablo is a JAMStack Starter template built with Next.js, Tailwind CSS & Sanity CMS by [Web3Templates](https://web3templates.com/).
+Stablo is a JAMStack Blog template built with Next.js, Tailwind CSS & Sanity CMS by [Web3Templates](https://web3templates.com/). It comes with free & pro version. 
 
-**[Click here to see live demo →](https://web3templates.com/preview/stablo)**
+## Live Demo
+
+
+**[Free Version Demo →](https://stablo.web3templates.com/)**
+
+**[Pro Version Demo →](https://stablo-pro.web3templates.com/)**
+
+## Features
+
+|Feature|Free Version|Pro Version|
+|--------|-----------|-----------| 
+|Next.js Codebase |  ✅  |  ✅   |
+|Tailwind CSS|  ✅  |  ✅   |
+|Integrated with Sanity CMS |  ✅  |  ✅   |
+|One-Click Deploy |  ✅  |  ✅   |
+|Mobile Responsive|  ✅  |  ✅   |
+|Dark & Light Mode |  ✅  |  ✅   |
+|Working Contact Page|  ✅  |  ✅   |
+|Pagination |  ❌  | ✅  |
+|Category Pages |  ❌  | ✅  |
+|Author Pages |  ❌  | ✅  |
+|Search Page |  ❌  | ✅  |
+|Homepage - Default |  ✅ |  ✅   |
+|Homepage - Alternate |  ❌ |  ✅   |
+|Homepage - Minimal |  ❌ |  ✅   |
+|Homepage - Lifestlye |  ❌ |  ✅   |
+|Homepage - Two Column |  ❌ |  ✅   |
+|Blog Post - Default |   ✅  | ✅  |
+|Blog Post - Minimal |  ❌  | ✅  |
+|Blog Post - Lifestlye |  ❌  | ✅  |
+|Blog Post - with Sidebar |  ❌  | ✅  |
+|6 Months Support |  ❌  | ✅  |
+|Free Updates |  ✅  | ✅  |
+|License |   GPL-2.0   | Commercial  |
+| &nbsp;|&nbsp; | &nbsp; |
+|Pricing| Free | **$49** |
+| &nbsp;| [Deploy for free](https://www.sanity.io/create?template=web3templates%2Fstablo) | [Purchase Pro](https://web3templates.com/templates/stablo-minimal-blog-website-template)|
+
+
+# Installation
 
 <a href="https://www.sanity.io/create?template=web3templates%2Fstablo">
 <img width="259" alt="Deploy to Vercel & Sanity" src="https://user-images.githubusercontent.com/1884712/169833532-1007b9aa-1456-4386-9526-7b5b46b094ed.png">
@@ -38,8 +77,13 @@ To use this template and configure sanity and deploying to vercel, we recommend 
 <img width="259" alt="Deploy to Vercel & Sanity" src="https://user-images.githubusercontent.com/1884712/169833532-1007b9aa-1456-4386-9526-7b5b46b094ed.png">
 </a>
 
-
 To setup one click deployment, click the above link below and follow the steps. 
+
+##  Video Demo & Tutorial 
+
+<a href="https://www.youtube.com/watch?v=UahnAg6vsa0">
+<img width="1224" alt="CleanShot 2022-10-29 at 14 21 09@2x" src="https://user-images.githubusercontent.com/1884712/198823233-875cfbcc-c528-40d4-b8bf-144a658dd57e.png">
+</a>
 
 ## Local Development
 
