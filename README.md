@@ -40,6 +40,9 @@ Stablo is a JAMStack Blog template built with Next.js, Tailwind CSS & Sanity CMS
 |Pricing| Free | **$49** |
 | &nbsp;| [Deploy for free](https://www.sanity.io/create?template=web3templates%2Fstablo) | [Purchase Pro](https://web3templates.com/templates/stablo-minimal-blog-website-template)|
 
+<a href="https://web3templates.com/templates/stablo-minimal-blog-website-template">
+<img width="160" alt="Upgrade to Pro" src="https://user-images.githubusercontent.com/1884712/199181300-37c2128e-d033-4145-a906-16fa5263a53b.png">
+</a> 
 
 # Installation
 
