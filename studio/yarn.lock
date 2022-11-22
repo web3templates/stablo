@@ -9291,9 +9291,9 @@ sanity-diff-patch@^1.0.9:
     diff-match-patch "^1.0.5"
 
 sanity-plugin-asset-source-unsplash@^0.2.1:
-  version "0.2.4"
-  resolved "https://registry.yarnpkg.com/sanity-plugin-asset-source-unsplash/-/sanity-plugin-asset-source-unsplash-0.2.4.tgz#f23273b9bf8bba085d06b045ab66d1af0e229593"
-  integrity sha512-iI8BTbgQaEouXj+iujJI+bZH1OMuBIhM7vj4x0OiIS/Lb2qD/gqvvWgE0FRI4DG0ceSHadtdKWPjkZv4xjOa9A==
+  version "0.2.5"
+  resolved "https://registry.yarnpkg.com/sanity-plugin-asset-source-unsplash/-/sanity-plugin-asset-source-unsplash-0.2.5.tgz#7d1f408e1cf1c4ac4cf63792aaff5791f1042618"
+  integrity sha512-IJVqQk8w8MjvVRIvGZVW/y+DVYThytJWJBH1Nkw0ZcrWNh1tVoK5s2gmGJis/r+pepCLthhdRAFj3N90i37jOw==
   dependencies:
     "@sanity/ui" "^0.37.22"
     react-infinite-scroll-component "^6.1.0"
