@@ -2,7 +2,7 @@
 
 Stablo is a JAMStack Blog template built with Next.js, Tailwind CSS & Sanity CMS by [Web3Templates](https://web3templates.com/). It comes with free & pro version. 
 
-<a href="https://www.sanity.io/create?template=web3templates%2Fstablo">
+<a href="https://vercel.com/new/web3templates/clone?demo-title=Stablo%20%E2%80%93%20Minimal%20Blog%20Template&demo-description=A%20minimal%20blog%20website%20template%20built%20with%20Next.js%2C%20TailwindCSS%20%26%20Sanity%20CMS%0A&demo-url=https%3A%2F%2Fstablo-template.vercel.app%2F&demo-image=%2F%2Fimages.ctfassets.net%2Fe5382hct74si%2F6p72KDrdJ8SjyvOBrgRbnr%2F0760db43f2cb08504a2f67601e74d986%2FCleanShot_2022-07-15_at_16.54.17.png&project-name=Stablo%20%E2%80%93%20Minimal%20Blog%20Template&repository-name=stablo-blog&repository-url=https%3A%2F%2Fgithub.com%2Fweb3templates%2Fstablo&from=templates&integration-ids=oac_hb2LITYajhRQ0i4QznmKH7gx">
 <img width="259" alt="Deploy to Vercel & Sanity" src="https://user-images.githubusercontent.com/1884712/169833532-1007b9aa-1456-4386-9526-7b5b46b094ed.png">
 </a> 
 
@@ -41,17 +41,13 @@ Stablo is a JAMStack Blog template built with Next.js, Tailwind CSS & Sanity CMS
 |License |   GPL-2.0   | Commercial  |
 | &nbsp;|&nbsp; | &nbsp; |
 |Pricing| Free | **$49** |
-| &nbsp;| [Deploy for free](https://www.sanity.io/create?template=web3templates%2Fstablo) | [Purchase Pro](https://web3templates.com/templates/stablo-minimal-blog-website-template)|
+| &nbsp;| [Deploy for free](https://vercel.com/new/web3templates/clone?demo-title=Stablo%20%E2%80%93%20Minimal%20Blog%20Template&demo-description=A%20minimal%20blog%20website%20template%20built%20with%20Next.js%2C%20TailwindCSS%20%26%20Sanity%20CMS%0A&demo-url=https%3A%2F%2Fstablo-template.vercel.app%2F&demo-image=%2F%2Fimages.ctfassets.net%2Fe5382hct74si%2F6p72KDrdJ8SjyvOBrgRbnr%2F0760db43f2cb08504a2f67601e74d986%2FCleanShot_2022-07-15_at_16.54.17.png&project-name=Stablo%20%E2%80%93%20Minimal%20Blog%20Template&repository-name=stablo-blog&repository-url=https%3A%2F%2Fgithub.com%2Fweb3templates%2Fstablo&from=templates&integration-ids=oac_hb2LITYajhRQ0i4QznmKH7gx) | [Purchase Pro](https://web3templates.com/templates/stablo-minimal-blog-website-template)|
 
 <a href="https://web3templates.com/templates/stablo-minimal-blog-website-template">
 <img width="160" alt="Upgrade to Pro" src="https://user-images.githubusercontent.com/1884712/199181300-37c2128e-d033-4145-a906-16fa5263a53b.png">
 </a> 
 
-# Installation
 
-<a href="https://www.sanity.io/create?template=web3templates%2Fstablo">
-<img width="259" alt="Deploy to Vercel & Sanity" src="https://user-images.githubusercontent.com/1884712/169833532-1007b9aa-1456-4386-9526-7b5b46b094ed.png">
-</a> 
 
 ###### Click the above button for one-click clone & deploy for this template. Read [quick start](#quick-start) guide below. 
 
@@ -64,32 +60,88 @@ Stablo is a JAMStack Blog template built with Next.js, Tailwind CSS & Sanity CMS
 [![Backend Sanity CMS Preview](https://user-images.githubusercontent.com/1884712/170030678-c6e32d47-0b92-42b7-ac2d-f3cf800c0969.png)](https://stablo-template.vercel.app/studio)
 
 
-## Quick Start
+# Installation
 
-To use this template and configure sanity and deploying to vercel, we recommend the "One Click Deploy" method.  Just follow the GUI and you will have an exact copy of what you see in the live demo .Using this method will automatically configure the following tasks for you.
+## Step 1: Clone & Deploy
 
+<a href="https://vercel.com/new/web3templates/clone?demo-title=Stablo%20%E2%80%93%20Minimal%20Blog%20Template&demo-description=A%20minimal%20blog%20website%20template%20built%20with%20Next.js%2C%20TailwindCSS%20%26%20Sanity%20CMS%0A&demo-url=https%3A%2F%2Fstablo-template.vercel.app%2F&demo-image=%2F%2Fimages.ctfassets.net%2Fe5382hct74si%2F6p72KDrdJ8SjyvOBrgRbnr%2F0760db43f2cb08504a2f67601e74d986%2FCleanShot_2022-07-15_at_16.54.17.png&project-name=Stablo%20%E2%80%93%20Minimal%20Blog%20Template&repository-name=stablo-blog&repository-url=https%3A%2F%2Fgithub.com%2Fweb3templates%2Fstablo&from=templates&integration-ids=oac_hb2LITYajhRQ0i4QznmKH7gx">
+<img width="259" alt="Deploy to Vercel & Sanity" src="https://user-images.githubusercontent.com/1884712/169833532-1007b9aa-1456-4386-9526-7b5b46b094ed.png">
+</a> 
+
+Click the above button to deploy for this template on vercel. It is the easist way to clone the repo, configure sanity and deploy to vercel.
+
+**The above deploy will automatically configure the following:**
+
+- Create new Repository in Github
 - Signup/Login to Sanity CMS (if not already)
 - Create a Sanity Project
-- Add required CORS & API settings in the project
-- Create new Repository in Github
 - Install Sanity Integration in Vercel
+- Add required CORS & API settings in the project
 - Add required `.env` variables
 - Deploy Sanity Studio - Content Manager
-- Import Demo Content (as seen in live demo)
 - Deploy to Vercel
  
 
-<a href="https://www.sanity.io/create?template=web3templates%2Fstablo">
-<img width="259" alt="Deploy to Vercel & Sanity" src="https://user-images.githubusercontent.com/1884712/169833532-1007b9aa-1456-4386-9526-7b5b46b094ed.png">
-</a>
+## Step 2: Add Content
 
-To setup one click deployment, click the above link below and follow the steps. 
+Once you have deployed the website, visit `https://your-published-url.com/studio` URL and add your content before visiting your website. Or you will see a blank / broken website. To import demo data as seen in the demo, follow the below steps inside.
 
-##  Video Demo & Tutorial 
+## Step 3: Set up the project locally
 
-<a href="https://www.youtube.com/watch?v=UahnAg6vsa0">
-<img width="1224" alt="CleanShot 2022-10-29 at 14 21 09@2x" src="https://user-images.githubusercontent.com/1884712/198823233-875cfbcc-c528-40d4-b8bf-144a658dd57e.png">
-</a>
+1. Clone the github repo you have created in step 1
+2. Run the following command to link vercel & pull the `.env` variables
+
+```bash
+npx vercel link
+```
+
+Then run the following command
+
+```bash
+npx vercel env pull
+```
+
+3. Open the Project in VSCode and open the terminal
+4. Run the following commands from terminal
+
+```bash
+npm install
+# or
+pnpm install
+```
+
+## Step 3: Import Demo Data
+
+To look like what you have seen in the demo, with all the content and images, follow the below steps:
+
+Run the following commands from terminal
+
+```bash
+npm run import
+# or
+pnpm import
+```
+
+## Step 4: Finish it up!
+
+Now, refresh your published URL again and you will be able to see your website. To continue develop locally, run the following command
+
+```bash
+npm run dev
+# or
+pnpm dev
+```
+
+Now your project should be up and the Next.js frontend will be running on http://localhost:3000. 
+
+Sanity Studio can be accessed using http://localhost:3333 by running the following command.
+
+```bash
+npm run sanity
+# or
+pnpm sanity
+```
+
 
 ## Local Development
 
