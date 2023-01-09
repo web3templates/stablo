@@ -7,6 +7,7 @@
     "nextbuild": "next build",
     "start": "next start",
     "sanity": "cd studio && sanity start",
+    "import": "sanity dataset import .sanity-template/data/production.tar.gz production",
     "export": "cd studio && sanity dataset export production ../.sanity-template/data/production.tar.gz",
     "lint": "next lint"
   },
