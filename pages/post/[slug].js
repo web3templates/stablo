@@ -98,7 +98,7 @@ export default function Post(props) {
 
           <Container className="!pt-0">
             <div className="max-w-screen-md mx-auto ">
-              <div className="text-center">
+              <div className="flex justify-center">
                 <CategoryLabel categories={post.categories} />
               </div>
 
