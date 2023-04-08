@@ -1,17 +1,17 @@
-import Container from "@components/container";
-import ThemeSwitch from "@components/themeSwitch";
+import Container from "@/components/container";
+import ThemeSwitch from "@/components/themeSwitch";
 import Image from "next/image";
-import { myLoader } from "@utils/all";
+import { myLoader } from "@/utils/all";
 import VercelLogo from "../public/img/vercel.svg";
 
 export default function Footer(props) {
   return (
     <Container className="mt-10 border-t border-gray-100 dark:border-gray-800">
-      <div className="text-sm text-center">
+      <div className="text-center text-sm">
         Copyright © {new Date().getFullYear()} {props?.copyright}. All
         rights reserved.
       </div>
-      <div className="flex justify-center gap-1 mt-1 text-sm text-center text-gray-500 dark:text-gray-600">
+      <div className="mt-1 flex justify-center gap-1 text-center text-sm text-gray-500 dark:text-gray-600">
         <span>
           {" "}
           Made by{" "}
@@ -37,7 +37,7 @@ export default function Footer(props) {
           </a>
         </span>
       </div>
-      <div className="flex items-center justify-between mt-2">
+      <div className="mt-2 flex items-center justify-between">
         <div className="mt-5">
           <a
             href="https://vercel.com/?utm_source=web3templates&utm_campaign=oss"
@@ -46,8 +46,6 @@ export default function Footer(props) {
             className="relative block w-44">
             <Image
               src={VercelLogo}
-              layout="fixed"
-              loader={myLoader}
               alt="Powered by Vercel"
               unoptimized={true}
               width="150"
@@ -68,13 +66,13 @@ const Backlink = () => {
       href="https://web3templates.com/templates/stablo-minimal-blog-website-template"
       target="_blank"
       rel="noopener"
-      className="fixed flex px-3 py-1 space-x-2 text-sm font-semibold text-gray-900 bg-white border border-gray-300 rounded shadow-sm place-items-center right-5 bottom-5 dark:bg-trueGray-900 dark:border-trueGray-700 dark:text-trueGray-300">
+      className="dark:bg-trueGray-900 dark:border-trueGray-700 dark:text-trueGray-300 fixed bottom-5 right-5 flex place-items-center space-x-2 rounded border border-gray-300 bg-white px-3 py-1 font-sans text-sm font-semibold text-gray-900 shadow-sm dark:border-gray-600 dark:bg-gray-800 dark:text-gray-100">
       <svg
         width="20"
         height="20"
         viewBox="0 0 30 30"
         fill="none"
-        className="w-4 h-4"
+        className="h-4 w-4"
         xmlns="http://www.w3.org/2000/svg">
         <rect
           width="30"

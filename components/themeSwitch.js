@@ -1,6 +1,7 @@
-// import { useState, useEffect } from "react";
+"use client";
+
 import { useTheme } from "next-themes";
-import { SunIcon } from "@heroicons/react/outline";
+import { SunIcon } from "@heroicons/react/24/outline";
 
 const ThemeSwitch = () => {
   //   const [mounted, setMounted] = useState(false);

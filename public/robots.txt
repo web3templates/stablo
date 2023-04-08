@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://stablo-pro.web3templates.com
+
+# Sitemaps
+Sitemap: https://stablo-pro.web3templates.com/sitemap.xml

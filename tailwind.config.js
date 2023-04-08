@@ -3,6 +3,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
   content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}"
   ],
@@ -14,7 +15,8 @@ module.exports = {
       },
       fontFamily: {
         // to change, update font in _document.js
-        sans: ["Inter", ...defaultTheme.fontFamily.sans],
+        sans: ["var(--font-inter)", ...defaultTheme.fontFamily.sans],
+        serif: ["var(--font-lora)", ...defaultTheme.fontFamily.serif],
         stock: [defaultTheme.fontFamily.sans]
       },
       aspectRatio: {
@@ -28,8 +30,5 @@ module.exports = {
   variants: {
     extend: {}
   },
-  plugins: [
-    require("@tailwindcss/line-clamp"),
-    require("@tailwindcss/typography")
-  ]
+  plugins: [require("@tailwindcss/typography")]
 };

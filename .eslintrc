@@ -4,5 +4,13 @@
     "rules": {
     "react/jsx-no-target-blank": [2, { "allowReferrer": true }],
     "react/display-name": [0, { "ignoreTranspilerName": false }]
-    }
+    },
+    "overrides": [
+      {
+        "files": ["*.js"],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
   }

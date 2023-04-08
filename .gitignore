@@ -36,8 +36,13 @@ yarn-error.log*
 # vercel
 .vercel
 
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
 # netlify
 .netlify
 
-# studio output
-public/studio
+# Sanity CMS
+/.sanity
+/dist

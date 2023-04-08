@@ -1,10 +1,14 @@
-import React from "react";
-import { Disclosure } from "@headlessui/react";
-import Container from "@components/container";
+"use client";
+
+import { Fragment } from "react";
+import { Menu, Transition, Disclosure } from "@headlessui/react";
+import Container from "@/components/container";
 import Link from "next/link";
 import Image from "next/image";
-import GetImage from "@utils/getImage";
-import { myLoader } from "@utils/all";
+import { urlForImage } from "@/lib/sanity/image";
+import cx from "clsx";
+import { ChevronDownIcon } from "@heroicons/react/24/solid";
+import { myLoader } from "@/utils/all";
 
 export default function Navbar(props) {
   const leftmenu = [
@@ -48,54 +52,63 @@ export default function Navbar(props) {
         <Disclosure>
           {({ open }) => (
             <>
-              <div className="flex flex-wrap justify-between md:gap-10 md:flex-nowrap">
-                <div className="flex-col items-center justify-start order-1 hidden w-full md:flex md:flex-row md:justify-end md:w-auto md:order-none md:flex-1">
+              <div className="flex flex-wrap justify-between md:flex-nowrap md:gap-10">
+                <div className="order-1 hidden w-full flex-col items-center justify-start md:order-none md:flex md:w-auto md:flex-1 md:flex-row md:justify-end">
                   {leftmenu.map((item, index) => (
-                    <Link href={item.href} key={index}>
-                      <a className="px-5 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500">
-                        {item.label}
-                      </a>
-                    </Link>
+                    <Fragment key={`${item.label}${index}`}>
+                      {item.children && item.children.length > 0 ? (
+                        <DropdownMenu
+                          menu={item}
+                          key={`${item.label}${index}`}
+                          items={item.children}
+                        />
+                      ) : (
+                        <Link
+                          href={item.href}
+                          key={`${item.label}${index}`}
+                          className="px-5 py-2 text-sm font-medium text-gray-600 hover:text-blue-500 dark:text-gray-400"
+                          target={item.external ? "_blank" : ""}
+                          rel={item.external ? "noopener" : ""}>
+                          {item.label}
+                        </Link>
+                      )}
+                    </Fragment>
                   ))}
                 </div>
-                <div className="flex items-center justify-between w-full md:w-auto">
-                  <Link href="/">
-                    <a className="w-28 dark:hidden">
-                      {props.logo ? (
-                        <Image
-                          {...GetImage(props.logo)}
-                          alt="Logo"
-                          sizes="(max-width: 640px) 100vw, 200px"
-                          priority={true}
-                        />
-                      ) : (
-                        <span className="block text-center">
-                          Stablo
-                        </span>
-                      )}
-                    </a>
+                <div className="flex w-full items-center justify-between md:w-auto">
+                  <Link href="/" className="w-28 dark:hidden">
+                    {props.logo ? (
+                      <Image
+                        {...urlForImage(props.logo)}
+                        alt="Logo"
+                        priority={true}
+                        sizes="(max-width: 640px) 100vw, 200px"
+                      />
+                    ) : (
+                      <span className="block text-center">
+                        Stablo
+                      </span>
+                    )}
                   </Link>
-                  <Link href="/">
-                    <a className="hidden w-28 dark:block">
-                      {props.logoalt ? (
-                        <Image
-                          {...GetImage(props.logoalt)}
-                          alt="Logo"
-                          sizes="(max-width: 640px) 100vw, 200px"
-                          priority={true}
-                        />
-                      ) : (
-                        <span className="block text-center">
-                          Stablo
-                        </span>
-                      )}
-                    </a>
+                  <Link href="/" className="hidden w-28 dark:block">
+                    {props.logoalt ? (
+                      <Image
+                        {...urlForImage(props.logoalt)}
+                        alt="Logo"
+                        priority={true}
+                        sizes="(max-width: 640px) 100vw, 200px"
+                      />
+                    ) : (
+                      <span className="block text-center">
+                        Stablo
+                      </span>
+                    )}
                   </Link>
                   <Disclosure.Button
                     aria-label="Toggle Menu"
-                    className="px-2 py-1 ml-auto text-gray-500 rounded-md md:hidden focus:text-blue-500 focus:outline-none dark:text-gray-300 ">
+                    className="ml-auto rounded-md px-2 py-1 text-gray-500 focus:text-blue-500 focus:outline-none dark:text-gray-300 md:hidden ">
                     <svg
-                      className="w-6 h-6 fill-current"
+                      className="h-6 w-6 fill-current"
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24">
                       {open && (
@@ -115,35 +128,56 @@ export default function Navbar(props) {
                   </Disclosure.Button>
                 </div>
 
-                <div className="flex-col items-center justify-start order-2 hidden w-full md:flex md:flex-row md:w-auto md:flex-1 md:order-none">
+                <div className="order-2 hidden w-full flex-col items-center justify-start md:order-none md:flex md:w-auto md:flex-1 md:flex-row">
                   {rightmenu.map((item, index) => (
-                    <Link href={item.href} key={index}>
-                      <a
-                        className="px-5 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500"
-                        target={item.external ? "_blank" : ""}
-                        rel={item.external ? "noopener" : ""}>
-                        <span> {item.label}</span>
-                        {item.badge && (
-                          <span className="bg-blue-100 text-blue-600 text-xs font-semibold ml-2 px-2 py-0.5 rounded dark:bg-cyan-200 dark:text-blue-800 ">
-                            {item.badge}
-                          </span>
-                        )}
-                      </a>
-                    </Link>
+                    <Fragment key={`${item.label}${index}`}>
+                      {item.children && item.children.length > 0 ? (
+                        <DropdownMenu
+                          menu={item}
+                          key={`${item.label}${index}`}
+                          items={item.children}
+                        />
+                      ) : (
+                        <Link
+                          href={item.href}
+                          key={`${item.label}${index}`}
+                          className="px-5 py-2 text-sm font-medium text-gray-600 hover:text-blue-500 dark:text-gray-400"
+                          target={item.external ? "_blank" : ""}
+                          rel={item.external ? "noopener" : ""}>
+                          <span> {item.label}</span>
+                          {item.badge && (
+                            <span className="ml-2 rounded bg-blue-100 px-2 py-0.5 text-xs font-semibold text-blue-600 dark:bg-cyan-200 dark:text-blue-800 ">
+                              {item.badge}
+                            </span>
+                          )}
+                        </Link>
+                      )}
+                    </Fragment>
                   ))}
                 </div>
               </div>
               <Disclosure.Panel>
-                <div className="flex flex-col items-center justify-start order-2 w-full md:hidden">
+                <div className="order-2 -ml-4 mt-4 flex w-full flex-col items-center justify-start md:hidden">
                   {mobilemenu.map((item, index) => (
-                    <Link href={item.href} key={index}>
-                      <a
-                        className="px-5 py-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-blue-500"
-                        target={item.external ? "_blank" : ""}
-                        rel={item.external ? "noopener" : ""}>
-                        {item.label}
-                      </a>
-                    </Link>
+                    <Fragment key={`${item.label}${index}`}>
+                      {item.children && item.children.length > 0 ? (
+                        <DropdownMenu
+                          menu={item}
+                          key={`${item.label}${index}`}
+                          items={item.children}
+                          mobile={true}
+                        />
+                      ) : (
+                        <Link
+                          href={item.href}
+                          key={`${item.label}${index}`}
+                          className="w-full px-5 py-2 text-sm font-medium text-gray-600 hover:text-blue-500 dark:text-gray-400"
+                          target={item.external ? "_blank" : ""}
+                          rel={item.external ? "noopener" : ""}>
+                          {item.label}
+                        </Link>
+                      )}
+                    </Fragment>
                   ))}
                 </div>
               </Disclosure.Panel>
@@ -154,3 +188,60 @@ export default function Navbar(props) {
     </Container>
   );
 }
+
+const DropdownMenu = ({ menu, items, mobile }) => {
+  return (
+    <Menu
+      as="div"
+      className={cx("relative text-left", mobile && "w-full")}>
+      {({ open }) => (
+        <>
+          <Menu.Button
+            className={cx(
+              "flex items-center gap-x-1 rounded-md px-5 py-2 text-sm font-medium  outline-none transition-all focus:outline-none focus-visible:text-indigo-500 focus-visible:ring-1 dark:focus-visible:bg-gray-800",
+              open
+                ? "text-blue-500 hover:text-blue-500"
+                : " text-gray-600 dark:text-gray-400 ",
+              mobile ? "w-full px-4 py-2 " : "inline-block px-4 py-2"
+            )}>
+            <span>{menu.label}</span>
+            <ChevronDownIcon className="mt-0.5 h-4 w-4" />
+          </Menu.Button>
+          <Transition
+            as={Fragment}
+            enter="lg:transition lg:ease-out lg:duration-100"
+            enterFrom="lg:transform lg:opacity-0 lg:scale-95"
+            enterTo="lg:transform lg:opacity-100 lg:scale-100"
+            leave="lg:transition lg:ease-in lg:duration-75"
+            leaveFrom="lg:transform lg:opacity-100 lg:scale-100"
+            leaveTo="lg:transform lg:opacity-0 lg:scale-95">
+            <Menu.Items
+              className={cx(
+                "z-20 origin-top-left rounded-md  focus:outline-none  lg:absolute lg:left-0  lg:w-56",
+                !mobile && "bg-white shadow-lg  dark:bg-gray-800"
+              )}>
+              <div className={cx(!mobile && "py-3")}>
+                {items.map((item, index) => (
+                  <Menu.Item as="div" key={`${item.title}${index}`}>
+                    {({ active }) => (
+                      <Link
+                        href={item?.path ? item.path : "#"}
+                        className={cx(
+                          "flex items-center space-x-2 px-5 py-2 text-sm lg:space-x-4",
+                          active
+                            ? "text-blue-500"
+                            : "text-gray-700 hover:text-blue-500 focus:text-blue-500 dark:text-gray-300"
+                        )}>
+                        <span> {item.title}</span>
+                      </Link>
+                    )}
+                  </Menu.Item>
+                ))}
+              </div>
+            </Menu.Items>
+          </Transition>
+        </>
+      )}
+    </Menu>
+  );
+};

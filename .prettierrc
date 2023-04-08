@@ -6,7 +6,10 @@
     "singleQuote": false,
     "trailingComma": "none",
     "bracketSpacing": true,
-    "jsxBracketSameLine": true,
+    "bracketSameLine": true,
     "arrowParens": "avoid",
-    "rangeStart": 0
+    "rangeStart": 0,
+    "plugins": [
+        "prettier-plugin-tailwindcss"
+    ]
 }
