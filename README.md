@@ -4,7 +4,6 @@ Thank you for purchasing Stablo Pro. The advanced Pro version of Stablo Blog Tem
 
 **[Click here to see live demo →](https://stablo-pro.web3templates.com/)**
 
-
 #### Template Preview
 
 [![Next.js Front-end Preview](https://user-images.githubusercontent.com/1884712/169838344-e32b7426-621a-45a4-aba8-afedf3377e1f.jpeg)](https://stablo-template.vercel.app/)
@@ -12,7 +11,6 @@ Thank you for purchasing Stablo Pro. The advanced Pro version of Stablo Blog Tem
 #### Sanity CMS Preview
 
 [![Backend Sanity CMS Preview](https://user-images.githubusercontent.com/1884712/170030678-c6e32d47-0b92-42b7-ac2d-f3cf800c0969.png)](https://stablo-template.vercel.app/studio)
-
 
 ## Quick Start
 
@@ -30,7 +28,7 @@ To use the Stablo Pro Template and configure Sanity & Vercel, we recommend the "
 
 ### 1. One click Deploy Free Version
 
-<a href="https://www.sanity.io/create?template=web3templates%2Fstablo">
+<a href="https://vercel.com/new/web3templates/clone?demo-title=Stablo%20%E2%80%93%20Minimal%20Blog%20Template&demo-description=A%20minimal%20blog%20website%20template%20built%20with%20Next.js%2C%20TailwindCSS%20%26%20Sanity%20CMS%0A&demo-url=https%3A%2F%2Fstablo-template.vercel.app%2F&demo-image=%2F%2Fimages.ctfassets.net%2Fe5382hct74si%2F6p72KDrdJ8SjyvOBrgRbnr%2F0760db43f2cb08504a2f67601e74d986%2FCleanShot_2022-07-15_at_16.54.17.png&project-name=Stablo%20%E2%80%93%20Minimal%20Blog%20Template&repository-name=stablo-blog&repository-url=https%3A%2F%2Fgithub.com%2Fweb3templates%2Fstablo&from=templates&integration-ids=oac_hb2LITYajhRQ0i4QznmKH7gx">
 <img width="259" alt="Deploy to Vercel & Sanity" src="https://user-images.githubusercontent.com/1884712/169833532-1007b9aa-1456-4386-9526-7b5b46b094ed.png">
 </a>
 
@@ -67,6 +65,7 @@ SANITY_STUDIO_API_PROJECT_ID=xxyyzz
 SANITY_STUDIO_API_DATASET=production
 
 ```
+
 or you can directly replace the project ID in the `/studio/sanity.json` if you prefer.
 
 ```js
@@ -89,7 +88,7 @@ npm install -g @sanity/cli
 
 2. Run
 
-To run sanity studio server, run the following command in your terminal.  It will open a live server on `http://localhost:3333`
+To run sanity studio server, run the following command in your terminal. It will open a live server on `http://localhost:3333`
 
 ```
 yarn sanity
@@ -108,7 +107,6 @@ sanity dataset import production.tar.gz production
 ```
 
 This step is optional, but recommended because otherwise, without any data, you cannot run front-end as it will throw errors. You can delete or modify the data later once you are done with customization.
-
 
 ### Run Next.js frontend
 
