@@ -7,4 +7,4 @@ export default async function AboutPage() {
   return <About settings={settings} authors={authors} />;
 }
 
-export const revalidate = 60;
+// export const revalidate = 60;
