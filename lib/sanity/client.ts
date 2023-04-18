@@ -65,7 +65,7 @@ export async function getAllPostsSlugs() {
 export async function getAllAuthorsSlugs() {
   if (client) {
     const slugs = (await client.fetch(authorsquery)) || [];
-    return slugs.map(slug => ({ slug }));
+    return slugs.map(slug => ({ author: slug }));
   }
   return [];
 }
@@ -89,7 +89,7 @@ export async function getAllAuthors() {
 export async function getAllCategories() {
   if (client) {
     const slugs = (await client.fetch(catpathquery)) || [];
-    return slugs.map(slug => ({ slug }));
+    return slugs.map(slug => ({ category: slug }));
   }
   return [];
 }
