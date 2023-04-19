@@ -37,7 +37,7 @@
     "react-hook-form": "^7.43.9",
     "react-iframe": "^1.8.5",
     "react-refractor": "^2.1.7",
-    "sanity": "^3.8.3",
+    "sanity": "^3.9.0",
     "sanity-plugin-asset-source-unsplash": "^1.0.6",
     "styled-components": "^5.3.9",
     "swr": "^2.1.2",

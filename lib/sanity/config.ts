@@ -6,8 +6,9 @@ export const useCdn = process.env.NODE_ENV === "production";
  * Importing other npm packages here could lead to needlessly increasing the client bundle size, or end up in a server-only function that don't need it.
  */
 
-export const projectId = process.env
-  .NEXT_PUBLIC_SANITY_PROJECT_ID as string;
+export const projectId =
+  process.env.NEXT_PUBLIC_SANITY_PROJECT_ID ||
+  process.env.SANITY_STUDIO_PROJECT_ID;
 
 export const dataset =
   process.env.NEXT_PUBLIC_SANITY_DATASET || ("production" as string);
