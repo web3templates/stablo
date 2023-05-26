@@ -25,7 +25,7 @@ export default function Post({ posts: initialposts }) {
   const [isLastPage, setIsLastPage] = useState(false);
 
   // [(($pageIndex - 1) * 10)...$pageIndex * 10]{
-  const params = {
+  const paramsForQuery = {
     pageIndex: (pageIndex - 1) * POSTS_PER_PAGE,
     limit: pageIndex * POSTS_PER_PAGE
   };
@@ -37,7 +37,7 @@ export default function Post({ posts: initialposts }) {
     data: posts,
     error,
     isValidating
-  } = useSWR([paginatedquery, params], fetcher, {
+  } = useSWR([paginatedquery, paramsForQuery], fetcher, {
     fallbackData: initialposts,
     onSuccess: () => {
       setIsLoading(false);
