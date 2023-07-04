@@ -2,6 +2,19 @@
 
 This is a changelog of stablo pro blog template. Ask Support for **Github Repo Access** to compare and merge changes to your project.
 
+## v2.1.0
+
+**Jul 4 2023**
+
+- Bug Fixes & Updates
+
+## v2.0.0
+
+**Apr 10 2022**
+
+- Upgraded to Next 13 /app Directory
+- Upgraded to Sanity Studio v3
+
 ## v1.1.0
 
 **Dec 6 2022**
