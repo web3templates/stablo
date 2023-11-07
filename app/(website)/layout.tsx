@@ -3,10 +3,11 @@ import Footer from "@/components/footer";
 import { urlForImage } from "@/lib/sanity/image";
 import Navbar from "@/components/navbar";
 
-export async function sharedMetaData(params) {
+async function sharedMetaData(params) {
   const settings = await getSettings();
 
   return {
+    // enable this for resolving opengraph image
     // metadataBase: new URL(settings.url),
     title: {
       default:
