@@ -19,6 +19,8 @@ Stablo is a JAMStack Blog template built with Next.js, Tailwind CSS & Sanity CMS
 | /app Directory | ✅  | ✅ |
 | Tailwind CSS   | ✅  | ✅ |
 | Sanity CMS (v3) | ✅  | ✅ |
+| On-demand Revalidation  | ❌  | ✅ |
+| Auto-Update New Posts | Time-Based | ✅ |
 | Mobile Responsive | ✅  | ✅ |
 | Dark & Light Mode | ✅  | ✅ |
 | Working Contact Page | ✅  | ✅ |
