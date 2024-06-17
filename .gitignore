@@ -46,3 +46,4 @@ next-env.d.ts
 # Sanity CMS
 /.sanity
 /dist
+.env*.local
