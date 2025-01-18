@@ -124,6 +124,8 @@ To look like what you have seen in the demo, with all the content and images, fo
 ```bash
 npm install -g @sanity/cli
 # or
+yarn global add @sanity/cli
+# or
 pnpm install -g @sanity/cli
 ```
 
@@ -138,6 +140,8 @@ Now, you will be able to import demo content by running the `sanity-import` comm
 ```bash
 npm run sanity-import
 # or
+yarn sanity-import
+# or
 pnpm sanity-import
 ```
 
@@ -148,6 +152,8 @@ Now, run your project using the below command.
 ```bash
 npm run dev
 # or
+yarn dev
+# or
 pnpm dev
 ```
 
@@ -157,6 +163,8 @@ Sanity Studio can be accessed using http://localhost:3000/studio or you can run 
 
 ```bash
 npm run sanity
+# or
+yarn sanity
 # or
 pnpm sanity
 ```
